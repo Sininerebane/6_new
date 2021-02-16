@@ -3,57 +3,57 @@ package ru.netology.statistics;
 import java.util.Arrays;
 
 public class StatisticsService {
-    public int calculateSum (int [] purchases) {
-        int sum =0;
+    public int calculatesum(int[] purchases) {
+        int sum = 0;
         for (int purchase : purchases) {
-        //    sum = sum + purchase;
-            sum +=purchase;
+            //    sum = sum + purchase;
+            sum += purchase;
 
         }
         return sum;
     }
 
-    public int averageSum (int [] purchases) {
-        int sum =0;
+    public int averagesum(int[] purchases) {
+        int sum = 0;
         for (int purchase : purchases) {
             //    sum = sum + purchase;
-            sum +=purchase;
+            sum += purchase;
 
         }
-        return sum/ purchases.length;
+        return sum / purchases.length;
     }
 
-    public int maximumMonth (int [] purchases) {
-        int max =0;
-        int month= 0;
-        for(int i =0; i < purchases.length; i++){
-            if(max <= purchases[i]) {
+    public int maximummonth(int[] purchases) {
+        int max = 0;
+        int month = 0;
+        for (int i = 0; i < purchases.length; i++) {
+            if (max <= purchases[i]) {
                 max = purchases[i];
-                month  = i+1;
+                month = i + 1;
             }
         }
 
         return month;
     }
 
-    public int minimumMonth (int [] purchases) {
+    public int minimummonth(int[] purchases) {
         int min = Arrays.stream(purchases).max().getAsInt();
-        int month= 0;
-        for(int i =0; i < purchases.length; i++){
-            if(min >= purchases[i]) {
+        int month = 0;
+        for (int i = 0; i < purchases.length; i++) {
+            if (min >= purchases[i]) {
                 min = purchases[i];
-                month  = i+1;
+                month = i + 1;
             }
         }
 
         return month;
     }
 
-    public int minMonthCnt (int [] purchases) {
+    public int minmonthcnt(int[] purchases) {
         double avg = Arrays.stream(purchases).average().getAsDouble();
-        int month= 0;
+        int month = 0;
         for (int purchase : purchases) {
-            if(purchase < avg){
+            if (purchase < avg) {
                 //month = month+1
                 month++;
             }
@@ -63,11 +63,11 @@ public class StatisticsService {
         return month;
     }
 
-    public int maxMonthCnt (int [] purchases) {
+    public int maxmonthcnt(int[] purchases) {
         double avg = Arrays.stream(purchases).average().getAsDouble();
-        int month= 0;
+        int month = 0;
         for (int purchase : purchases) {
-            if(purchase > avg){
+            if (purchase > avg) {
                 //month = month+1
                 month++;
             }

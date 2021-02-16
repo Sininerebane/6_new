@@ -8,78 +8,80 @@ import static org.junit.jupiter.api.Assertions.*;
 class StatisticsServiceTest {
 
     @Test
-    void calculateSum() {
+    void shouldCalculateSum() {
         StatisticsService service = new StatisticsService();
 
-        int [] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 180;
 
-        long actual = service.calculateSum(purchases);
+        long actual = service.calculatesum(purchases);
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
 
     }
 
     @Test
-    void averageSum () {
+    void shouldAverageSum() {
         StatisticsService service = new StatisticsService();
 
-        int [] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 15;
 
-        long actual = service.averageSum (purchases);
+        long actual = service.averagesum(purchases);
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
 
     }
+
     @Test
-    void maximumMonth () {
+    void shouldMaximumMonth() {
         StatisticsService service = new StatisticsService();
 
-        int [] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 8;
 
-        long actual = service.maximumMonth (purchases);
+        long actual = service.maximummonth(purchases);
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
 
     }
 
     @Test
-    void minimumMonth () {
+    void shouldMinimumMonth() {
         StatisticsService service = new StatisticsService();
 
-        int [] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 9;
 
-        long actual = service.minimumMonth (purchases);
+        long actual = service.minimummonth(purchases);
 
-        assertEquals (expected, actual);
-
-    }
-    @Test
-    void minMonthCnt () {
-        StatisticsService service = new StatisticsService();
-
-        int [] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 5;
-
-        long actual = service.minMonthCnt (purchases);
-
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
 
     }
 
     @Test
-    void maxMonthCnt () {
+    void shouldMinMonthCnt() {
         StatisticsService service = new StatisticsService();
 
-        int [] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
 
-        long actual = service.maxMonthCnt (purchases);
+        long actual = service.minmonthcnt(purchases);
 
-        assertEquals (expected, actual);
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    void shouldMaxMonthCnt() {
+        StatisticsService service = new StatisticsService();
+
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+
+        long actual = service.maxmonthcnt(purchases);
+
+        assertEquals(expected, actual);
 
     }
 
